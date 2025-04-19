@@ -1,8 +1,13 @@
 # Data-Base-Management
-Python Code for Query Parsing in SQL querying on CSV files,<br>
-C++ code for Lock-manager of Databases Management
----------------------------------------------------------------------------------------------------------
-## Lock Manager
+
+## Transaction Lock Manager
+
+### Overview
+Lock Manager for Concurrent Transaction Coordination is a systems-level project built to manage synchronized access to shared resources in environments with multiple concurrent transactions. It ensures data consistency and system integrity by implementing a robust locking mechanism that supports both shared (read) and exclusive (write) locks.
+
+Designed with a focus on concurrency control, this lock manager is ideal for use in database systems and multi-threaded applications. It handles complex scenarios such as lock acquisition, release, upgrade, and downgrade, effectively preventing conflicts and minimizing contention. The system guarantees safe, deadlock-free resource handling through precise coordination and conflict resolution strategies, showcasing a deep understanding of operating system design and synchronization techniques.
+
+---
 
 The `LockManager.cpp` supports the following capabilities:
 
@@ -11,7 +16,7 @@ The `LockManager.cpp` supports the following capabilities:
 3. Support for lock upgrade.
 4. Support for lock downgrade.
 
-A resource will be identified by a 10 character string.
+A resource will be identified by a 10-character string.
 
 Typical queries would look like this:
 
@@ -23,9 +28,18 @@ Typical queries would look like this:
     unlock("AAE", 1237);
 
 ---------------------------------------------------------------------------------------------------------
-## Query Processor
+## SQL Query Processor
 
-In `QueryParsing.ipynb`, It takes an SQL statement as input and gives the result of the query as output.<br>
+### Overview
+Custom SQL Query Processor is a lightweight engine designed to execute standard SQL operations on CSV-formatted data, mimicking the behavior of relational database systems. This project showcases a deep understanding of SQL query parsing, execution planning, and data handling without relying on traditional database backends.
+
+The processor supports essential SQL clauses such as SELECT, WHERE, ORDER BY, LIMIT, and DELETE, along with efficient execution of natural and Cartesian joins. Its modular design ensures smooth parsing and execution, enabling flexible query processing over structured CSV datasets.
+
+This project highlights strong proficiency in database internals, query parsing, and algorithmic logic—bridging the gap between raw data storage and relational querying.
+
+---
+
+`QueryParsing.ipynb` takes an SQL statement as input and gives the result of the query as output.<br>
 
 It supports queries like:
 1) SELECT
